@@ -1,0 +1,8 @@
+.theme-light {
+    --header-background: #111e6c;
+    --header-text-color: #fff;
+    --header-link-border-color: #fff;
+    --header-font-size: 17px;
+
+    --text-color: #000;
+}
