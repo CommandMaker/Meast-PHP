@@ -1,0 +1,22 @@
+.theme-light {
+    /* Header */
+    --primary-color: #111e6c;
+    --header-text-color: #ffffff;
+    --header-link-border-color: #fff;
+    --header-font-size: 17px;
+    --header-res-navbar-background: rgba(255, 255, 255, .9);
+    --header-res-navbar-text-color: #000;
+    --media-responsive-width: 1100px;
+
+    --text-color: #000;
+
+    --body-font-family: 'Montserrat', 'Roboto', 'Ubuntu', sans-serif;
+}
+
+.theme-dark {
+    /* Header */
+}
+
+:root {
+    --header-res-navbar-height: calc(100vh - 66px);
+}

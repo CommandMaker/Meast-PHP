@@ -4,19 +4,35 @@ const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
+const sassCompiler = require('gulp-sass');
+
+function sass () {
+    return src('src/sass/**/*.scss')
+        .pipe(sassCompiler())
+        .pipe(dest('src/css'));
+}
+
+function sassComponents () {
+    return src('src/components/global/*.scss')
+        .pipe(sassCompiler())
+        .pipe(concat('components.min.css'))
+        .pipe(cssMin({ compatibility: 'ie8' }))
+        .pipe(dest('src/minify/css'));
+}
+
 function cssMinify() {
-    return src('res/css/**/*')
+    return src('src/css/**/*.css')
         .pipe(concat('all.min.css'))
         .pipe(cssMin({ compatibility: 'ie8' }))
-        .pipe(dest('res/minify/css'));
+        .pipe(dest('src/minify/css'));
 }
 
 // JavaScript Task
 function jsTask() {
-    return src('res/js/*.js', { sourcemaps: true })
+    return src('src/js/**/*.js', { sourcemaps: true })
         .pipe(concat('all.min.js'))
         .pipe(terser())
-        .pipe(dest('res/minify/js/', { sourcemaps: '.' }));
+        .pipe(dest('src/minify/js', { sourcemaps: '.' }));
 }
 
 function browsersyncServe(cb) {
@@ -34,7 +50,10 @@ function browsersyncReload(cb) {
 
 function watchTask() {
     watch('**/*.php', browsersyncReload);
-    watch(['res/css/**/*.css', 'res/js/**/*.js'], series(cssMinify, jsTask, browsersyncReload));
+    watch(['src/css/**/*.css'], series(cssMinify, browsersyncReload));
+    watch('src/sass/**/*.scss', series(sass, cssMinify, browsersyncReload));
+    watch('src/components/**/*.scss', series(sassComponents, browsersyncReload));
+    watch('src/js/**/*.js', series(jsTask, browsersyncReload));
 }
 
 exports.dev = series(
@@ -46,3 +65,5 @@ exports.dev = series(
 exports.cssMinify = cssMinify;
 exports.jsMinify = jsTask;
 exports.browsersync = browsersyncServe;
+exports.sass = sass;
+exports.sassComponents = sassComponents;

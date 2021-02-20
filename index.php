@@ -9,11 +9,17 @@
         <!-- CSS -->
             <!-- FONTS -->
             <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css"/>
-            <!-- FONTS -->
-        <link rel="stylesheet" href="res/minify/css/all.min.css">
+        <!-- FONTS -->
+        <link rel="stylesheet" href="src/minify/css/all.min.css">
         <!-- /CSS -->
     </head>
     <body class="theme-light">
-        <?php include 'res/includes/header.php' ?>
+        <?php include 'src/includes/header.php' ?>
+
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur consequatur corporis, cupiditate, deleniti deserunt dignissimos earum fuga libero maxime nihil, officiis provident quia quibusdam reiciendis tenetur velit. Dicta, est. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi cumque, deleniti dolore ea eius exercitationem inventore nesciunt odio omnis perferendis quae quidem recusandae rem sed tempora tenetur? Inventore, nobis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto aspernatur consequuntur dicta dolor doloremque, eius natus nesciunt nihil, obcaecati omnis quasi quia sit soluta tenetur totam ut vitae, voluptates.</p>
+        </div>
+
+        <script src="src/minify/js/all.min.js"></script>
     </body>
 </html>

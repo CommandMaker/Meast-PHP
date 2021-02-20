@@ -1,0 +1,60 @@
+label.header__res-button {
+    display: none;
+    border: 1px solid var(--header-text-color);
+    border-radius: 4px;
+
+    width: 50px;
+    height: 40px;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+label.header__res-button div {
+    height: 5px;
+    border-radius: 4px;
+    background: var(--header-text-color);
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    transition: .3s;
+    z-index: 999;
+}
+
+label.header__res-button div.bar-1 {
+    top: 8px;
+}
+
+label.header__res-button div.bar-2 {
+    top: 18px;
+}
+
+label.header__res-button div.bar-3 {
+    top: 28px;
+}
+
+label.header__res-button input {
+    display: none;
+}
+
+label.header__res-button input:checked ~ div.bar-2 {
+    opacity: 0;
+}
+
+label.header__res-button input:checked ~ div {
+    transform: rotate(45deg);
+    top: 18px;
+}
+
+label.header__res-button input:checked ~ div.bar-3 {
+    transform: rotate(135deg);
+}
+
+@media screen and (max-width: 1100px) {
+    label.header__res-button {
+        display: flex;
+    }
+}

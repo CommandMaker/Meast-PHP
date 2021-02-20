@@ -1,0 +1,17 @@
+/*
+ * Des éléments CSS utiles sont définis ici (telle que la classe .container de Bootstrap pour center des éléments)
+*/
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 90px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}

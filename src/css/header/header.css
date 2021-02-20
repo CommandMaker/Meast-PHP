@@ -1,0 +1,180 @@
+/*
+ * Toutes les variables sont définies dans le fichier variable.css
+ */
+
+header {
+    width: 100%;
+    height: 66px;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+div.header__navbar__container {
+    background: var(--primary-color);
+    position: relative;
+    z-index: 999;
+}
+
+header nav.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 66px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header nav.header__nav div.header__nav__left-part {
+    height: 66px;
+    display: flex;
+}
+
+header nav.header__nav ul.menu {
+    margin: 0;
+    padding: 0;
+    height: 66px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    line-height: 66px;
+}
+
+header nav.header__nav ul.menu li a,
+header nav.header__nav a.header__link__first {
+    height: 64px;
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color .3s ease-in-out;
+}
+
+header nav.header__nav a.header__link__first {
+    font-family: 'Ubuntu', sans-serif;
+    transition: none;
+    font-weight: 900;
+    font-size: 23px;
+}
+
+header nav.header__nav a.header__link__first span {
+    margin-left: 5px;
+}
+
+header nav.header__nav a.header__link__first:hover {
+    border-color: transparent;
+}
+
+header nav.header__nav a.header__link__first img {
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+header nav.header__nav ul.menu li a:hover {
+    border-color: var(--header-link-border-color);
+}
+
+.header__icon {
+    padding-right: 10px;
+}
+
+/*
+    Responsive
+ */
+
+nav.header__res__navbar {
+    background: var(--header-res-navbar-background);
+
+    position: relative;
+    transition: height .7s;
+    height: 0;
+    overflow: hidden;
+}
+
+nav.header__res__navbar__visible {
+    height: var(--header-res-navbar-height);
+}
+
+nav.header__res__navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: var(--header-res-navbar-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav.header__res__navbar li {
+    height: 50px;
+    width: 100%;
+
+    border: 1px solid transparent;
+    transition: border-bottom-color .3s;
+}
+
+nav.header__res__navbar li:hover {
+    border-bottom-color: var(--text-color);
+}
+
+nav.header__res__navbar li a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+nav.header__res__navbar li a.navbar__icon:before {
+    content: '\f1ea';
+    font-family: "Font Awesome 5 Pro", serif;
+    font-weight: 900;
+
+    position: absolute;
+    left: calc(50% - 60px);
+}
+
+nav.header__res__navbar li a.navbar__icon.comment:before {
+    content: '\f075';
+}
+
+nav.header__res__navbar li a.navbar__icon.shopping-cart:before {
+    content: '\f07a';
+}
+
+nav.header__res__navbar li a.navbar__icon.download:before {
+    content: '\f019';
+}
+
+nav.header__res__navbar li a.navbar__icon.sign-in-alt:before {
+    content: '\f2f6';
+}
+
+nav.header__res__navbar li a.navbar__icon > span {
+    position: absolute;
+    left: calc(50% - 30px);
+}
+
+@media screen and (max-width: 1100px) {
+    header nav.header__nav ul.menu {
+        display: none;
+    }
+
+    nav.header__res__navbar {
+        display: flex;
+    }
+}
