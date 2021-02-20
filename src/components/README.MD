@@ -1,0 +1,2 @@
+# Composants
+Dans ce dossier se trouve les composants (checkbox, radio buttons...) du projet. Le préprocesseur SASS est utilisé afin de simplifier le CSS. Pour créer un style de composant, créez les parties dans des dossiers avec des fichiers commençant par des `_`. Puis importez les dans des fichiers générique pour tous les styles de composants dans le dossier `global`.
