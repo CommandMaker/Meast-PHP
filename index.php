@@ -7,18 +7,23 @@
         <title>Accueil - Meast</title>
 
         <!-- CSS -->
-            <!-- FONTS -->
-            <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css"/>
-        <!-- FONTS -->
+        <link href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="src/minify/css/all.min.css">
         <!-- /CSS -->
     </head>
     <body class="theme-light">
         <?php include 'src/includes/header.php' ?>
 
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur consequatur corporis, cupiditate, deleniti deserunt dignissimos earum fuga libero maxime nihil, officiis provident quia quibusdam reiciendis tenetur velit. Dicta, est. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi cumque, deleniti dolore ea eius exercitationem inventore nesciunt odio omnis perferendis quae quidem recusandae rem sed tempora tenetur? Inventore, nobis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto aspernatur consequuntur dicta dolor doloremque, eius natus nesciunt nihil, obcaecati omnis quasi quia sit soluta tenetur totam ut vitae, voluptates.</p>
-        </div>
+        <section class="banner">
+            <div class="informations">
+                <h1>CREATED TO PLAY</h1>
+                <div class="container"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto assumenda at aut culpa cum debitis deserunt distinctio doloremque earum eum explicabo fugit harum hic inventore ipsa iusto libero magni molestias nobis odio officiis perspiciatis possimus provident quam quas, repellat, reprehenderit saepe sed sint tempore, ullam unde vero voluptas voluptate voluptates voluptatibus! Adipisci aliquam asperiores, aspernatur cum dolorem, doloribus eligendi iste labore maiores mollitia nesciunt omnis quae quaerat, quam qui repellat repudiandae sapiente similique sit tempora tempore vel vero! Ad alias commodi culpa dicta doloribus esse illo, ipsam itaque iusto maxime officia quasi qui quod rem temporibus veniam, voluptate, voluptatibus.</p></div>
+            </div>
+            <div class="background">
+                <img src="src/img/home-banner/desktop-light.png" class="desktop-image" alt="">
+                <img src="src/img/home-banner/mobile-light.png" class="mobile-image" alt="">
+            </div>
+        </section>
 
         <script src="src/minify/js/all.min.js"></script>
     </body>

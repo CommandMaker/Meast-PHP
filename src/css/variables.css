@@ -11,6 +11,9 @@
     --text-color: #000;
 
     --body-font-family: 'Montserrat', 'Roboto', 'Ubuntu', sans-serif;
+
+    /* Bannière de la page d'accueil */
+    --homepage-banner-text-color: #fff;
 }
 
 .theme-dark {

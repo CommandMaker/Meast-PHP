@@ -36,10 +36,19 @@ function jsTask() {
 }
 
 function browsersyncServe(cb) {
-    browsersync.init({
-        proxy: "localhost",
-        notify: false,
-    });
+    if (process.platform === "linux") {
+        console.log('[Meast log] Proxy version Linux');
+        browsersync.init({
+            proxy: "meast.localhost",
+            notify: false,
+        });
+    } else {
+        console.log('[Meast log] Proxy version Windows');
+        browsersync.init({
+            proxy: "localhost",
+            notify: false,
+        });
+    }
     cb();
 }
 

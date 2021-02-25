@@ -12,3 +12,6 @@ body {
     font-family: var(--body-font-family);
 }
 
+.section-first {
+    margin-top: 90px;
+}
